@@ -17,19 +17,20 @@ function totalEnlaces() {
 function refEnlaces() {
     let boton = document.getElementsByTagName("button")[1];
     boton.addEventListener("click", function() {
-        for (let i = 0; i < 3; i++) {
+        let p = document.getElementsByTagName("p");
+        let parrafos = p.length
+        for(let i = 0; i < parrafos; i++) {
             let title = document.createElement("p");
-            let contenidoTitle = document.createTextNode("Párrafo " + (i + 1));
-            title.appendChild(contenidoTitle);
+            let content = document.createTextNode("Párrafo " + (i + 1));
+            title.appendChild(content);
             document.body.appendChild(title);
-            
+
             let ul = document.createElement("ul");
-            let p = document.getElementsByTagName("p")[i];
-            let links = p.getElementsByTagName("a");
+
+            let links = p[i].getElementsByTagName("a");
             for (let j = 0; j < links.length; j++) {
-                let link = links[j];
                 let li = document.createElement("li");
-                let contenido = document.createTextNode(link.getAttribute("href"));
+                let contenido = document.createTextNode(links[j].getAttribute("href"));
                 li.appendChild(contenido);
                 ul.appendChild(li);
             }
