@@ -23,18 +23,10 @@ function resetearTamaño() {
     }
 }*/
 
-function aumentarTamaño() {
-    let div = document.firstElementChild;
-    let p = div.getElementsByTagName("p");
-    for(let i = 0; i < p.length; i++) {
-        p[i].style.fontSize = "16px"
-    }
+function aumentarTamaño(elemento) {
+    elemento.style.fontSize="16px";
 }
 
-function resetearTamaño() {
-    let div = document.firstElementChild;
-    let p = div.getElementsByTagName("p");
-    for(let i = 0; i < p.length; i++) {
-        p[i].style.fontSize = "12px"
-    }
+function resetearTamaño(elemento) {
+    elemento.style.fontSize="12px";
 }
