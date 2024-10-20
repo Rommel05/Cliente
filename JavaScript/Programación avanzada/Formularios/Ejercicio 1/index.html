@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+        
+    <form id="form" method="get">
+        <label>Nombre:</label>
+        <input type="text" name="nombre"> 
+
+        <br>
+
+        <label>Apellidos:</label>
+        <input type="text" name="apellidos">
+
+        <br>
+        
+        <label>Teléfono:</label>
+        <input type="tel" name="telefono">
+
+        <br>
+
+        <label>Dni:</label>
+        <input type="text" name="dni">
+
+        <br>
+
+        <label>Edad:</label>
+        <input type="text" name="edad">
+
+        <br>
+
+        <label>Sexo:</label> <br>
+        <input type="radio" name="sexo">
+        <label>Hombre</label> <br>
+        <input type="radio" name="sexo">
+        <label>Mujer</label>
+
+        <br>
+
+        <label>Incluir mi foto:</label> <br>
+        <input type="file" name="foto">
+
+        <br>
+
+        <input type="checkbox" name="publicidad">
+        <label>Enviar publicidad</label>
+
+        <br>
+
+        <label>Elige tu afición favorita</label>
+        <select name="aficiones" id="aficiones">
+            <option value="1">Música</option>
+            <option value="2">Lectura</option>
+            <option value="3">Deporte</option>
+        </select>
+
+        <br>
+
+        <label>Observaciones:</label> <br>
+        <textarea name="observaciones" id="observaciones" cols="30" rows="5"></textarea>
+
+        <br>
+
+        <input type="submit" value="Guardar cambios" name="save">
+        <input type="reset" value="Borrar los datos introducidos" name="reset">
+    </form>
+    
+</body>
+</html>
