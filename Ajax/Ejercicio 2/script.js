@@ -6,6 +6,7 @@ window.onload = function() {
     bienvenida.addEventListener("click", cargarBienvenida);
 
     let google = document.getElementById("google");
+    google.addEventListener("click", cargarGoogle);
 }
 
 function cargarInicio() {
@@ -38,4 +39,8 @@ function cargarBienvenida() {
     })
 
     xhr.send();
+}
+
+function cargarGoogle() {
+    window.location.assign("https://www.google.es/");
 }
