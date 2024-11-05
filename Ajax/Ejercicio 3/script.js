@@ -3,10 +3,13 @@ window.onload = () => {
     change.addEventListener("click", changeImage);
 }
 
+let images = ["img/foto2.jpeg", "img/foto3.jpg", "img/foto4.jpeg", "img/foto1.jpeg"];
+
 function changeImage() {
-    let contenedor = document.getElementById("contenedor");
+    let image = images.shift();
+    images.push(image);
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "img/image2.jpg", true);
+    xhr.open("GET", image, true);
     xhr.responseType = "blob";
     
     xhr.addEventListener("readystatechange", () => {
