@@ -32,21 +32,21 @@ function totalPersonajes() {
 
             let api = xhr.response;
             let resultados = api.data.results;
-            let contador = 0;
+            //let contador = 0;
 
-            for (let i = 0; i < resultados.length; i++) {
+            /*for (let i = 0; i < resultados.length; i++) {
                 contador++;
-            }
+            }*/
 
             if (contenedor.firstElementChild) {
                 contenedor.removeChild(contenedor.firstElementChild);
                 let p = document.createElement("p");
-                let content = document.createTextNode(contador);
+                let content = document.createTextNode("Hay un total de " + resultados.length);
                 p.appendChild(content);
                 contenedor.appendChild(p);
             } else {
                 let p = document.createElement("p");
-                let content = document.createTextNode(contador);
+                let content = document.createTextNode("Hay un total de " + resultados.length);
                 p.appendChild(content);
                 contenedor.appendChild(p);
             }    
