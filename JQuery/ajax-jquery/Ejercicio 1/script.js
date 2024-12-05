@@ -5,13 +5,13 @@ $(document).ready(function () {
         $.ajax({
             type: "get",
             url: "texto.txt",
-            dataType: "text",
-            success: function (response) {
-                $('#contenedor').append(response); 
-            },
-            error: function () { 
-                alert("No se ha podido cargar el archivo")
-             }
+            dataType: "text"
+        })
+        .done(function(response) {  
+            $('#contenedor').append(response); 
+        })
+        .fail(function() { 
+            alert("No se ha podido cargar el archivo");
         });
     });
 });
